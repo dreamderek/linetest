@@ -12,7 +12,7 @@ bot.on('message', function (event) {
   // 回覆訊息給使用者 (一問一答所以是回覆不是推送)
   switch (event.message.text) {
     case "1":
-      event.reply(`你說了 ${event.message.text}`);
+      event.reply(`你說了 ${event.source.userId}`);
       break;
     case "2":
       event.reply(`你說了 ${event.message.id}`);
