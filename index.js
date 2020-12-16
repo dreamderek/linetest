@@ -32,3 +32,12 @@ bot.on('message', function (event) {
 bot.listen('/', process.env.PORT || 5000, function () {
   console.log('機器人上線啦！');
 });
+
+
+let express = require('express');
+let app = express();
+
+app.get('/', (res, req) => {
+  req.send("test");
+});
+app.listen(8888);
