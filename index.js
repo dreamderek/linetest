@@ -7,6 +7,8 @@ let bot = linebot({
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
 
+bot.push("Uf016d2662b586e2ee9d0202711557de", "test");
+
 // 當有人傳送訊息給 Bot 時
 bot.on('message', function (event) {
   // 回覆訊息給使用者 (一問一答所以是回覆不是推送)
@@ -19,9 +21,6 @@ bot.on('message', function (event) {
       break;
     case "3":
       event.reply(`你說了 ${event.message.type}`);
-      break;
-    case "4":
-      event.reply(`你說了 ${event.message.text}`);
       break;
     default:
       event.reply(`你說了 ${event.message.text}`);
